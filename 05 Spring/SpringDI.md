@@ -24,7 +24,7 @@
 
 - POJO (Plain Old Java Object) 방식의 프레임워크
 - 의존성 주입 (Dependency Injection)을 통한 객체 관계 구성
-- 관점 지향 프로그래밍 (AOP, Aspect Orieted Programming)
+- 관점 지향 프로그래밍 (AOP, Aspect Oriented Programming)
 - 제어 역전(IoC, Inversion of Control)
 - 높은 확장성과 다양한 라이브러리
 
@@ -32,11 +32,9 @@
 
 ### 의존성 개념
 
-<aside style="background-color:#d3d3d3">
-💡 Class A 객체가 어떤 일을 처리하기 위해 Class B 객체의 도움을 받아야만 일을 처리할 수 있다면 <b>Class A는 Class B에 의존한다.</b> 라고 표현
+> 💡 Class A 객체가 어떤 일을 처리하기 위해 Class B 객체의 도움을 받아야만 일을 처리할 수 있다면 <b>Class A는 Class B에 의존한다.</b> 라고 표현
 
 ⇒ **의존대상 B가 변하면 그것이 A에 영향을 미친다.**
-</aside>
 
 ```java
 public class Desktop {
@@ -115,10 +113,7 @@ public class Test {
 
 ### 타입 의존성 제거
 
-<aside style="background-color:#d3d3d3">
-💡 의존 관계를 인터페이스로 <b>추상화</b>하게 되면, 더 다양한 의존 관계를 맺을 수 있으며 실제 구현 클래스와의 <b>관계가 느슨</b>해지고, <b>결합도가 낮아짐.</b>
-
-</aside>
+> 💡 의존 관계를 인터페이스로 <b>추상화</b>하게 되면, 더 다양한 의존 관계를 맺을 수 있으며 실제 구현 클래스와의 <b>관계가 느슨</b>해지고, <b>결합도가 낮아짐.</b>
 
 ```java
 public interface Computer {
@@ -178,10 +173,7 @@ public class Programmer {
     - 런타임 시점의 의존관계는 컨테이너나 팩토리같은 제 3의 존재가 결정
     - 의존관계는 사용할 오브젝트에 대한 레퍼런스를 외부에서 제공(주입)해줌으로써 만들어줌
 
-<aside style="background-color:#d3d3d3">
-💡 DI는 의존관계를 외부에서 결정하는 것이기 때문에, 클래스 변수를 결정하는 방법들이 곧 DI를 구현하는 방법
-
-</aside>
+> 💡 DI는 **의존관계를 외부에서 결정**하는 것이기 때문에, 클래스 변수를 결정하는 방법들이 곧 DI를 구현하는 방법
 
 ### 생성자를 이용한 의존성 주입
 
@@ -249,13 +241,13 @@ public class Programmer {
 
 - Container
     - 스프링에서 핵심적인 역할을 하는 객체를 Bean이라고 하며, Container는 Bean의 인스턴스화 조립, 관리의 역할, 사용 소멸에 대한 처리를 담당
-    - BeanFactory
+    - `BeanFactory`
         - 프레임워크 설정과 기본 기능을 제공하는 컨테이너
         - 모든 유형의 객체를 관리할 수 있는 매커니즘 제공
-    - ApplicationContext
+    - `ApplicationContext`
         - BeanFactory 하위 인터페이스
         - 이벤트 처리, 국제화용 메시지 처리 등 다양한 기능 제공
-    - WebApplicationContext
+    - `WebApplicationContext`
         - 웹 환경에서 Spring을 사용하기 위한 기능이 추가됨
         - 대표적인 구현 클래스로 XmlWebApplicationContext가 있음
 
