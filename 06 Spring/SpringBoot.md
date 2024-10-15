@@ -29,10 +29,9 @@
     - 압축 해제 폴더 선택 후 Finish
 4. Spring Boot Project 생성 (STS)
     <figure class="thrid">
-      <img src="./img/SpringBoot(1).png" width="22%">
-      <img src="./img/SpringBoot(2).png" width="22%"></a>
-      <img src="./img/SpringBoot(3).png" width="22%"></a>
-      <figcaption>STS로 Spring Boot 프로젝트 생성</figcaption>
+      <img src="./img/SpringBoot(1).png" width="32%">
+      <img src="./img/SpringBoot(2).png" width="32%">
+      <img src="./img/SpringBoot(3).png" width="32%">
     </figure>
 
     - Spring Starter Project를 통해 생성 가능
