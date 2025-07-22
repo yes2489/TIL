@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 
 /**
  * Papago 언어 감지 요청을 프록시하는 API
+ * 
  * @route POST /detect
  * @param {string} req.body.text 감지할 원본 텍스트
  * @returns {Object} 감지된 언어 정보
@@ -42,6 +43,9 @@ app.post('/detect', (req, res) => {
       res.json(result);
     } else {
       console.error('Papago 오류:', xhr.responseText);
+      res.send(
+        `<script>alert(${xhr.responseText.message});</script>`
+      );
       res.status(xhr.status).send('Papago API 오류');
     }
   };
